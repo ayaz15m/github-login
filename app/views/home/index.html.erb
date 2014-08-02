@@ -1,0 +1,9 @@
+<h1>Home Page</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "Private Page", private_path %>
+<% else %>
+  <%= link_to user_omniauth_authorize_path(:github) do %>
+    <%= image_tag "http://natashatherobot.com/wp-content/uploads/Screen-Shot-2013-09-04-at-8.24.18-PM.png" %>
+  <% end %>
+<% end %>
